@@ -1,6 +1,6 @@
 # 📰 Fake News / Spam Detection App
 
-**Deployed on Streamlit Cloud** | **Live Demo:** [Open App](https://share.streamlit.io/)
+**Deployed on Streamlit Cloud** | **Live Demo:** [Open App](https://fakenewsdetectionbyajmainadil.streamlit.app/)
 
 A machine learning-powered web application that classifies text as **Fake/Spam** or **Real/Ham** using Natural Language Processing and Logistic Regression.
 
@@ -34,9 +34,10 @@ The dataset was cleaned, null values handled, and text normalized for optimal mo
 2. **Lowercase Conversion** - Normalizes text case
 3. **Stopword Removal** - Filters common English words
 4. **Lemmatization** - Reduces words to base forms using WordNetLemmatizer
-5. **Tokenization** - Splits text into words for processing
+5. **Part-of-Speech (POS) Tagging** - Filters adjectives, verbs, and other important parts of speech
+6. **Tokenization** - Splits text into words for processing
 
-This ensures the model trains on clean, normalized input data.
+This ensures the model trains on clean, normalized input data with linguistically meaningful tokens.
 
 ---
 
@@ -51,7 +52,7 @@ Multiple models were evaluated on the training dataset:
 | Logistic Regression | **Best** | ✅ Selected |
 
 **Training Configuration:**
-- Train-Test Split: 70% / 30%
+- Train-Test Split: 80% / 20%
 - Vectorizer: TF-IDF (fit on training data only)
 - Evaluation Metrics: Accuracy, Confusion Matrix, Classification Report, ROC-AUC
 
