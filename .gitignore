@@ -1,0 +1,5 @@
+FakeNewsDetection/venv/
+FakeNewsDetection/__pycache__/
+.DS_Store
+FakeNewsDetection/text_dataset.csv
+FakeNewsDetection/text_dataset.csv
