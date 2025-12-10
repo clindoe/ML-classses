@@ -1,9 +1,15 @@
 import pickle
 import string
 
+import nltk
 import streamlit as st
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+
+# Download required NLTK data
+nltk.download("stopwords", quiet=True)
+nltk.download("wordnet", quiet=True)
+nltk.download("averaged_perceptron_tagger", quiet=True)
 
 
 # ==============================
