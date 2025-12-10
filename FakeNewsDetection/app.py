@@ -1,5 +1,6 @@
 import pickle
 import string
+import os
 
 import nltk
 import streamlit as st
@@ -96,7 +97,11 @@ def full_preprocess(text: str) -> str:
 
 @st.cache_resource
 def load_model():
-    with open("logistic_regression_tfidf.pkl", "rb") as f:
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(script_dir, "logistic_regression_tfidf.pkl")
+    
+    with open(model_path, "rb") as f:
         saved = pickle.load(f)
     return saved["model"], saved["vectorizer"]
 
